@@ -8,6 +8,15 @@ board = [[0] * 10] * 20
 
 
 class Piece:
+    """Class to represent a piece"""
+    all_shapes = {'I': [[0] * 4, [1] * 4, [0] * 4, [0] * 4],
+                  'J': [[1, 0, 0], [1, 1, 1], [0, 0, 0]],
+                  'L': [[0, 0, 1], [1, 1, 1], [0, 0, 0]],
+                  'O': [[1, 1], [1, 1]],
+                  'S': [[0, 1, 1], [1, 1, 0], [0, 0, 0]],
+                  'T': [[0, 1, 0], [1, 1, 1], [0, 0, 0]],
+                  'Z': [[1, 1, 0], [0, 1, 1], [0, 0, 0]]}
+
     def __init__(self, x: int, y: int, shape: list) -> None:
         """
         Creates a new piece
@@ -39,4 +48,3 @@ class Piece:
         """
         self.x += x
         self.y += y
-
