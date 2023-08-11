@@ -1,5 +1,5 @@
-from game import Game
+from game import Tetris
 
 if __name__ == '__main__':
-    game = Game()
+    game = Tetris()
     game.run()
